@@ -1,0 +1,152 @@
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  background-image: url("./images/forestPixabay.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  background-color: rgb(102, 148, 42);
+  min-height: 10%;
+}
+
+.card {
+  background-color: transparent;
+}
+
+/* .card-Gamer {
+  max-height: 35vh;
+} */
+
+.avatar {
+  width: 20vh;
+}
+.gaming-img {
+  width: 10vh;
+  height: 10vh;
+}
+
+h5 {
+  color: white;
+  text-shadow: 0 0 0.2em black, 0 0 0.2em black;
+}
+
+@media screen and (max-width: 576px) {
+  .card-title {
+    transform: rotate(-90deg);
+    transform-origin: middle top 0;
+  }
+}
+
+/* button MODIFS */
+
+.go-dice{
+  margin-bottom: 60px;
+}
+
+.hold{
+  margin-top: 65px;
+}
+
+/* Dice rot */
+
+.container {
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+}
+
+.dice {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  right: 15px;
+  cursor: pointer;
+}
+
+.dice-turn {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: spin 1s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 10px solid rgba(243, 184, 22, 0.493);
+}
+
+.one {
+  background-image: url("./images/two.png");
+  background-color: rgb(102, 148, 42);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotateX(0deg) translateZ(75px);
+}
+
+.two {
+  background-image: url("./images/one.png");
+  background-color: rgb(102, 148, 42);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotateX(0deg) translateZ(75px);
+}
+
+.three {
+  background-image: url("./images/three.png");
+  background-color: rgb(102, 148, 42);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotateY(90deg) translateZ(75px);
+}
+.four {
+  background-image: url("./images/four.png");
+  background-color: rgb(102, 148, 42);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotateY(-90deg) translateZ(75px);
+}
+
+.five {
+  background-image: url("./images/five.png");
+  background-color: rgb(102, 148, 42);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotateX(90deg) translateZ(75px);
+}
+
+.six {
+  background-image: url("./images/six.png");
+  background-color: rgb(102, 148, 42);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotateX(-90deg) translateZ(75px);
+}
+
+/* ANIMATIONS */
+
+@keyframes spin {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
