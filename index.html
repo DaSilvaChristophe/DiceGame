@@ -21,18 +21,38 @@
     <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
+    
+    <!-- Modal -->
+    <a href="#" data-target="#modal" data-toggle="modal"></a>
+    <div id="modal" class="modal" role="dialog">
+      <div class="modal-content">  
+          <div class="modal-close" data-dismiss="dialog">x</div>
+          <div class="modal-header">
+              <p>100 points WIN !!</p>
+          </div>
+          <div class="modal-body">
+              <p>
+                Félicitations tu as remporter le jeu 
+              </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn" role="button" data-dismiss="dialog">Rejouer</a>
+          </div>
+      </div>
+    </div>
+
     <header class="d-flex justify-content-around align-items-center">
       <i class="fa-solid fa-toolbox"></i>
       <h1 class="title">Dino Dice</h1>
       <i class="fa-solid fa-volume-high"></i>
     </header>
     <main class="accueil mt-5 d-flex w-100 h-100 flex-column flex-sm-nowrap flex-sm-row  justify-content-sm-around align-items-sm-center">
-      <div class="card card-Gamer d-flex flex-row flex-sm-column align-items-center py-4 p-sm-4" >
+      <div class="div-player-one bg-light card card-Gamer d-flex flex-row flex-sm-column align-items-center py-4 p-sm-4" >
         <h5 class="card-title pb-sm-4">JOUEUR 1</h5>
         <img src="images/Dino1.png" class="card-img-top avatar pb-sm-4" alt="..." />
         <div class="card-body d-flex flex-column align-items-center p-0">
           <p class="card-text">SCORE TOTAL</p>
-          <p class="card-text">100</p>
+          <p class="total-player-one card-text">0</p>
           <p class="card-text">Score Courant</p>
           <p class="hold-player-one card-text">0</p>
         </div>
@@ -44,13 +64,14 @@
     
         </div>
         <div class="hold btn btn-primary">Hold</div>
+        <div class="next-player"></div>
       </div>
-      <div class="card card-Gamer d-flex flex-row flex-sm-column align-items-center py-4 p-sm-4">
+      <div class="div-player-two bg-light card card-Gamer d-flex flex-row flex-sm-column align-items-center py-4 p-sm-4">
         <h5 class="card-title pb-sm-4">JOUEUR 2</h5>
         <img src="images/Dino2.png" class="card-img-top avatar pb-sm-4" alt="..." />
         <div class="card-body d-flex flex-column align-items-center p-0">
           <p class="card-text">SCORE TOTAL</p>
-          <p class="card-text">100</p>
+          <p class="total-player-two card-text">0</p>
           <p class="card-text">Score Courant</p>
           <p class="hold-player-two card-text">0</p> 
         </div>
