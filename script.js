@@ -10,7 +10,7 @@ const structureDice = () => {
 
         displayDice = displayDice + 
         `<div class="dice">
-            <div class="face one"><input type="hidden" class="value-one" value="1"></div>
+            <div class="face one"><input type="hidden" class="value-one" value="0"></div>
             <div class="face two"><input type="hidden" class="value-two" value="2"></div>
             <div class="face three"><input type="hidden" class="value-three" value="3"></div>
             <div class="face four"><input type="hidden" class="value-four" value="4"></div>
@@ -65,8 +65,8 @@ let arraySum = [];
 let arrayTotalScorePlayOne = [];
 let arrayTotalScorePlayTwo = [];
 // Tableaux qui va permettre l'affichage du score total
-let totalPlayOne = []
-let totalPlayTwo = []
+let totalPlayOne = ["0"]
+let totalPlayTwo = ["0"]
 
 // Charge l'animation (joueur qui a la main) au chargement du DOM
 document.addEventListener('DOMContentLoaded', function(){
@@ -161,6 +161,7 @@ const animationPlayer = () => {
         totalPlayerOne.innerHTML = `${lastElementArrayPlayerOne}`;
         
         holdPlayerOne.innerHTML = "0"
+   
 
         if(totalPlayerOne.innerHTML >= 100){
             setTimeout(function() {
@@ -226,17 +227,19 @@ buttonGoDice.addEventListener('click', function (){
         // Image de la valeur obtenu
         numberTwo.style.backgroundImage = "url('./images/one.png')"
 
+        
         resultOne = true
         // function qui va arreter l'animation (setTimeout = 1s)
         function diceRemove(){
             dice.classList.remove('dice-turn')
         }
 
-        setTimeout(function() {
+         setTimeout(function() {
             diceRemove();
             animationPlayer();
+            
             resultOne = false
-        }, 1000)
+        }, 1000) 
 
   } else if(result === 2){
         numberTwo.style.backgroundImage = "url('./images/two.png')"
@@ -395,6 +398,7 @@ const modalLink = document.querySelector("[data-toggle=modal]");
     for (let close of modalCloses){
 
         close.addEventListener('click', function(){
+            window.location.href =  "index.html"
             modal.classList.remove("show");
         })
     }
